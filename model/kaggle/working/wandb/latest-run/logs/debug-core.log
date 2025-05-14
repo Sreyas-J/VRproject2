@@ -1,0 +1,8 @@
+{"time":"2025-05-14T03:54:42.107131264Z","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpsxi3is5q/port-35.txt","pid":35,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false}
+{"time":"2025-05-14T03:54:43.428079286Z","level":"INFO","msg":"Will exit if parent process dies.","ppid":35}
+{"time":"2025-05-14T03:54:43.430128647Z","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":33561,"Zone":""}}
+{"time":"2025-05-14T03:54:43.597871002Z","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:41600"}
+{"time":"2025-05-14T03:54:43.614433587Z","level":"INFO","msg":"handleInformInit: received","streamId":"3j70ahcu","id":"127.0.0.1:41600"}
+{"time":"2025-05-14T03:54:43.727916686Z","level":"INFO","msg":"handleInformInit: stream started","streamId":"3j70ahcu","id":"127.0.0.1:41600"}
+{"time":"2025-05-14T05:08:44.311441414Z","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"3j70ahcu","id":"127.0.0.1:41600"}
+{"time":"2025-05-14T05:08:44.311613471Z","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"3j70ahcu","id":"127.0.0.1:41600"}

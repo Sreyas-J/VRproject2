@@ -1,0 +1,20 @@
+{"time":"2025-05-14T03:54:43.619937477Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/kaggle/working/wandb/offline-run-20250514_035438-3j70ahcu/logs/debug-core.log"}
+{"time":"2025-05-14T03:54:43.727027994Z","level":"WARN","msg":"GraphQL client is nil, skipping feature loading"}
+{"time":"2025-05-14T03:54:43.727863119Z","level":"INFO","msg":"created new stream","id":"3j70ahcu"}
+{"time":"2025-05-14T03:54:43.727906118Z","level":"INFO","msg":"stream: started","id":"3j70ahcu"}
+{"time":"2025-05-14T03:54:43.727945084Z","level":"INFO","msg":"writer: Do: started","stream_id":"3j70ahcu"}
+{"time":"2025-05-14T03:54:43.728065381Z","level":"INFO","msg":"sender: started","stream_id":"3j70ahcu"}
+{"time":"2025-05-14T03:54:43.728132064Z","level":"INFO","msg":"handler: started","stream_id":"3j70ahcu"}
+{"time":"2025-05-14T03:54:49.317198011Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-14T03:54:50.057814619Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-05-14T03:54:50.063461254Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-05-14T04:00:01.468768135Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-05-14T04:00:01.475497405Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-05-14T05:08:44.299823209Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-14T05:08:44.299947228Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-14T05:08:44.304246848Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-05-14T05:08:44.311491259Z","level":"INFO","msg":"stream: closing","id":"3j70ahcu"}
+{"time":"2025-05-14T05:08:44.311514439Z","level":"INFO","msg":"handler: closed","stream_id":"3j70ahcu"}
+{"time":"2025-05-14T05:08:44.311526877Z","level":"INFO","msg":"writer: Close: closed","stream_id":"3j70ahcu"}
+{"time":"2025-05-14T05:08:44.311534067Z","level":"INFO","msg":"sender: closed","stream_id":"3j70ahcu"}
+{"time":"2025-05-14T05:08:44.311605142Z","level":"INFO","msg":"stream: closed","id":"3j70ahcu"}
