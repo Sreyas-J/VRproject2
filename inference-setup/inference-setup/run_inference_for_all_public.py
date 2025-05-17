@@ -5,8 +5,8 @@ import pandas as pd
 from bert_score import score as bert_score
 
 STUDENT_DIR = "sample-submission"
-IMAGE_DIR = "/home/monjoy/vr-evaluations/data"
-CSV_PATH = "/home/monjoy/vr-evaluations/data/metadata.csv"
+IMAGE_DIR = "/home/dell/Desktop/IIITB/6thSem/VR/VRproject2/inference-setup/inference-setup/data"
+CSV_PATH = "/home/dell/Desktop/IIITB/6thSem/VR/VRproject2/inference-setup/inference-setup/data/metadata.csv"
 RESULTS_DIR = "results"
 AGGREGATE_CSV = os.path.join(RESULTS_DIR, "all_results.csv")
 
@@ -48,7 +48,7 @@ def main():
     for folder in os.listdir(STUDENT_DIR):
         student_path = os.path.join(STUDENT_DIR, folder)
         roll_number = folder
-        env_name = "vr-eval"
+        env_name = "VRproject2"
         print(f"Evaluating {roll_number} in env {env_name}...")
         try:
             install_requirements(student_path, env_name)
