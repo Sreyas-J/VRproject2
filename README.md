@@ -3,6 +3,7 @@ Multimodal Visual Question Answering (VQA) is a challenging research problem tha
 
 This project explores multimodal VQA using the Amazon Berkeley Objects (ABO) dataset, which consists of over 147,000 product listings and nearly 400,000 catalog images with multilingual metadata. The primary objective of this mini-project is to curate a diverse single-word answer VQA dataset using this multimodal data, evaluate pre-trained baseline models on it, and enhance performance through parameter-efficient fine-tuning using Low-Rank Adaptation (LoRA). 
 # Important Contents
+```bash
 - vrproject2baselineblip.ipynb - BLIP baseline
 - vrproject2baselinevilt.ipynb - ViLT baseline
 - data_curation.ipynb - Performs preprocessing on the ABO dataset to filter and select appropriate images for generating the VQA dataset
@@ -11,6 +12,7 @@ This project explores multimodal VQA using the Amazon Berkeley Objects (ABO) dat
 - fine-tune-model.ipynb - Fine-tunes the BLIP model using the generated VQA dataset and evaluates its performance using standard metrics
 - inference-setup - Implementation files
 - model/kaggle/working - Contains kaggle files of the model
+```
 # Inference Instructions
 
 Follow the steps below to run inference on the curated dataset:
