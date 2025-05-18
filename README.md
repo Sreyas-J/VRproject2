@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ## 4. Run Inference Script
 Navigate back a folder and run the inference script
 ``` bash
-cd..
+cd ..
 ```
 ```bash
 python run_inference_for_all_public.py
