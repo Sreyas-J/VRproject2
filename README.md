@@ -14,25 +14,25 @@ This project explores multimodal VQA using the Amazon Berkeley Objects (ABO) dat
 # Inference Instructions
 
 Follow the steps below to run inference on the curated dataset:
-## 0. Create Conda Environment (Python 3.9)
+
+## 0. Clone the repository
+This demonstrates the method of cloning using SSH
+```bash
+git clone git@github.com:Sreyas-J/VRproject2.git
+```
+
+## 1. Create Conda Environment (Python 3.9)
 Create and activate a Conda environment with Python 3.9:
 ```bash
-conda create -n vqa_env python=3.9
+conda create -n vr-eval python=3.9
 ```
 ```bash
 conda activate vr-eval
 ```
 
-## 1. Setup
-
-
-- For **Linux**:
-  ```bash
-  cd inference-setup
-  ```
 ## 2. Move to the sample-submission directory:
   ```bash
-  cd sample-submission
+  cd inferrence-setup/inference-setup/sample-submission
   ```
 
 ## 3. Install Dependencies
