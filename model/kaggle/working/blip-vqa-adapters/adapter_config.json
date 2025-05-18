@@ -1,7 +1,7 @@
 {
   "alpha_pattern": {},
   "auto_mapping": null,
-  "base_model_name_or_path": "Salesforce/blip-vqa-capfilt-large",
+  "base_model_name_or_path": "Salesforce/blip-vqa-base",
   "bias": "none",
   "eva_config": null,
   "exclude_modules": null,
@@ -25,11 +25,11 @@
   "rank_pattern": {},
   "revision": null,
   "target_modules": [
-    "projection",
-    "qkv",
     "self.query",
     "self.key",
-    "self.value"
+    "self.value",
+    "qkv",
+    "projection"
   ],
   "task_type": "QUESTION_ANS",
   "use_dora": false,

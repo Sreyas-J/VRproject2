@@ -4,3 +4,5 @@ abo-images-small.tar
 abo-listings.tar
 outputs/
 outputs_old/
+.ipynb_checkpoints/
+inference-ipynb_checkpoints/__MACOSX/

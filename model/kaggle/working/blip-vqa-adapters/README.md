@@ -1,5 +1,5 @@
 ---
-base_model: Salesforce/blip-vqa-capfilt-large
+base_model: Salesforce/blip-vqa-base
 library_name: peft
 ---
 

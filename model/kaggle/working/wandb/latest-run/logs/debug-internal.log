@@ -1,20 +1,20 @@
-{"time":"2025-05-14T03:54:43.619937477Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/kaggle/working/wandb/offline-run-20250514_035438-3j70ahcu/logs/debug-core.log"}
-{"time":"2025-05-14T03:54:43.727027994Z","level":"WARN","msg":"GraphQL client is nil, skipping feature loading"}
-{"time":"2025-05-14T03:54:43.727863119Z","level":"INFO","msg":"created new stream","id":"3j70ahcu"}
-{"time":"2025-05-14T03:54:43.727906118Z","level":"INFO","msg":"stream: started","id":"3j70ahcu"}
-{"time":"2025-05-14T03:54:43.727945084Z","level":"INFO","msg":"writer: Do: started","stream_id":"3j70ahcu"}
-{"time":"2025-05-14T03:54:43.728065381Z","level":"INFO","msg":"sender: started","stream_id":"3j70ahcu"}
-{"time":"2025-05-14T03:54:43.728132064Z","level":"INFO","msg":"handler: started","stream_id":"3j70ahcu"}
-{"time":"2025-05-14T03:54:49.317198011Z","level":"INFO","msg":"Starting system monitor"}
-{"time":"2025-05-14T03:54:50.057814619Z","level":"INFO","msg":"Pausing system monitor"}
-{"time":"2025-05-14T03:54:50.063461254Z","level":"INFO","msg":"Resuming system monitor"}
-{"time":"2025-05-14T04:00:01.468768135Z","level":"INFO","msg":"Pausing system monitor"}
-{"time":"2025-05-14T04:00:01.475497405Z","level":"INFO","msg":"Resuming system monitor"}
-{"time":"2025-05-14T05:08:44.299823209Z","level":"INFO","msg":"Stopping system monitor"}
-{"time":"2025-05-14T05:08:44.299947228Z","level":"INFO","msg":"Stopped system monitor"}
-{"time":"2025-05-14T05:08:44.304246848Z","level":"INFO","msg":"handler: operation stats","stats":{}}
-{"time":"2025-05-14T05:08:44.311491259Z","level":"INFO","msg":"stream: closing","id":"3j70ahcu"}
-{"time":"2025-05-14T05:08:44.311514439Z","level":"INFO","msg":"handler: closed","stream_id":"3j70ahcu"}
-{"time":"2025-05-14T05:08:44.311526877Z","level":"INFO","msg":"writer: Close: closed","stream_id":"3j70ahcu"}
-{"time":"2025-05-14T05:08:44.311534067Z","level":"INFO","msg":"sender: closed","stream_id":"3j70ahcu"}
-{"time":"2025-05-14T05:08:44.311605142Z","level":"INFO","msg":"stream: closed","id":"3j70ahcu"}
+{"time":"2025-05-17T19:25:47.77182959Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/kaggle/working/wandb/offline-run-20250517_192547-fgxko0up/logs/debug-core.log"}
+{"time":"2025-05-17T19:25:47.87464629Z","level":"WARN","msg":"GraphQL client is nil, skipping feature loading"}
+{"time":"2025-05-17T19:25:47.874744786Z","level":"INFO","msg":"created new stream","id":"fgxko0up"}
+{"time":"2025-05-17T19:25:47.874770183Z","level":"INFO","msg":"stream: started","id":"fgxko0up"}
+{"time":"2025-05-17T19:25:47.874798848Z","level":"INFO","msg":"writer: Do: started","stream_id":"fgxko0up"}
+{"time":"2025-05-17T19:25:47.874816575Z","level":"INFO","msg":"sender: started","stream_id":"fgxko0up"}
+{"time":"2025-05-17T19:25:47.874856396Z","level":"INFO","msg":"handler: started","stream_id":"fgxko0up"}
+{"time":"2025-05-17T19:25:53.375567625Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-17T19:25:54.011325609Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-05-17T19:25:54.015833469Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-05-17T19:25:54.018052341Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-05-17T19:25:54.026191091Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-05-18T06:37:52.326761148Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-18T06:37:52.326864069Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-18T06:37:52.331314014Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-05-18T06:37:52.339412496Z","level":"INFO","msg":"stream: closing","id":"fgxko0up"}
+{"time":"2025-05-18T06:37:52.339451005Z","level":"INFO","msg":"handler: closed","stream_id":"fgxko0up"}
+{"time":"2025-05-18T06:37:52.339466928Z","level":"INFO","msg":"writer: Close: closed","stream_id":"fgxko0up"}
+{"time":"2025-05-18T06:37:52.339474845Z","level":"INFO","msg":"sender: closed","stream_id":"fgxko0up"}
+{"time":"2025-05-18T06:37:52.339541125Z","level":"INFO","msg":"stream: closed","id":"fgxko0up"}
