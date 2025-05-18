@@ -32,7 +32,7 @@ conda activate vr-eval
 
 ## 2. Move to the sample-submission directory:
   ```bash
-  cd inferrence-setup/inference-setup/sample-submission
+  cd inference-setup/inference-setup/sample-submission
   ```
 
 ## 3. Install Dependencies
