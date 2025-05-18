@@ -1,3 +1,4 @@
+import re
 import argparse
 import os
 import pandas as pd
@@ -9,6 +10,26 @@ from transformers import BlipProcessor, BlipForQuestionAnswering
 from peft import PeftModel
 
 
+def finetune_answer(s):
+    """Normalize answer for more accurate comparison."""
+    # Define reversed number map (digits to words)
+    number_map = {
+        '0': 'zero', '1': 'one', '2': 'two', '3': 'three', '4': 'four',
+        '5': 'five', '6': 'six', '7': 'seven', '8': 'eight', '9': 'nine', '10': 'ten'
+    }
+    
+    # Convert digits to words
+    for digit, word in number_map.items():
+        s = re.sub(r'\b' + digit + r'\b', word, s.lower())
+    
+    # Remove articles
+    s = re.sub(r'\b(a|an|the)\b', ' ', s)
+    # Remove punctuation and extra whitespace
+    s = re.sub(r'[^\w\s]', '', s)
+    s = re.sub(r'\s+', ' ', s).strip()
+    return s
+
+
 def download(output_dir, google_drive_url):
     """Download model weights from Google Drive if not already present."""
     if not os.path.exists(output_dir):
@@ -18,10 +39,13 @@ def download(output_dir, google_drive_url):
     else:
         print(f"Model weights already exist at {output_dir}")
 
-
 def load_finetuned_model(model_dir):
     """Load the fine-tuned BLIP model with LoRA adapter."""
-    MODEL_NAME = "Salesforce/blip-vqa-capfilt-large"
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    # Load processor
+    MODEL_NAME = "Salesforce/blip-vqa-base"
+    # Load the model
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # 1. Load processor (feature extractor + tokenizer)
@@ -38,24 +62,33 @@ def load_finetuned_model(model_dir):
         is_trainable=False,
         local_files_only=True
     )
+    model.to(device)
     model.eval()
-
     return processor, model, device
 
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--image_dir', type=str, required=True, help='Path to image folder')
+    parser.add_argument('--csv_path', type=str, required=True, help='Path to metadata CSV')
+    args = parser.parse_args()
 
-def run_inference(image_dir: str, csv_path: str, model_dir: str):
-    """Load model, run inference on all rows in CSV, and return list of generated answers."""
-    # Download model weights if needed (uncomment to enable)
-    # download(model_dir, "https://drive.google.com/drive/folders/1nEkAdYeWluPJ4k5_6cyWPGAFf0fnqbXs?usp=sharing")
+    # Google Drive URL for model weights
+    GOOGLE_DRIVE_URL = "https://drive.google.com/drive/folders/1nEkAdYeWluPJ4k5_6cyWPGAFf0fnqbXs?usp=sharing"
+    MODEL_DIR = "gdrive/"
 
-    # Load processor, model, and device
-    processor, model, device = load_finetuned_model(model_dir)
+    # Download model weights
+    download(MODEL_DIR, GOOGLE_DRIVE_URL)
+
+    # Load model and processor
+    print("Loading the model BLIP with LoRA...")
+    processor, model, device = load_finetuned_model(f"{MODEL_DIR}blip-vqa-adapters/")
 
     # Load metadata CSV
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv(args.csv_path)
+
     generated_answers = []
     for idx, row in tqdm(df.iterrows(), total=len(df)):
-        image_path = os.path.join(image_dir, row['image_name'])
+        image_path = os.path.join(args.image_dir, row['image_name'])
         question = str(row['question'])
         try:
             image = Image.open(image_path).convert("RGB")
@@ -66,29 +99,15 @@ def run_inference(image_dir: str, csv_path: str, model_dir: str):
             # Post-process answer to be one word and lowercase
             answer = str(answer).split()[0].lower()
         except Exception as e:
-            print(f"Error processing image {image_path}: {e}")
+            print(f"Error processing image {image_path}: {str(e)}")
             answer = "error"
+        answer = finetune_answer(answer)
         generated_answers.append(answer)
 
     # Add generated answers to DataFrame and save to results.csv
     df["generated_answer"] = generated_answers
-    output_csv = "results.csv"
-    df.to_csv(output_csv, index=False)
-    print(f"Inference complete. Results saved to {output_csv}")
-    return generated_answers
+    df.to_csv("results.csv", index=False)
+    print("Inference complete. Results saved to results.csv")
 
-
-def main():
-    parser = argparse.ArgumentParser(description="Run BLIP-VQA LoRA inference on a set of images and questions.")
-    parser.add_argument('--image_dir', type=str, required=True, help='Path to image folder')
-    parser.add_argument('--csv_path', type=str, required=True, help='Path to metadata CSV')
-    parser.add_argument('--model_dir', type=str, default='./gdrive/blip-vqa-adapters', help='Path to downloaded model weights')
-    args = parser.parse_args()
-
-    # Run inference and optionally print results list
-    answers = run_inference(args.image_dir, args.csv_path, args.model_dir)
-    print(answers)
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

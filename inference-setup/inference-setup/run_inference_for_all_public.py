@@ -22,8 +22,8 @@ def run_inference(student_path, env_name):
     inf_path = os.path.join(student_path, "inference.py")
     if os.path.exists(inf_path):
         result = subprocess.run(
-            ["conda", "run", "-n", env_name, "python", "inference.py", "--image_dir", IMAGE_DIR, "--csv_path", CSV_PATH],
-            capture_output=True, text=True,
+            ["conda", "run","--no-capture-output", "-n", env_name, "python", "inference.py", "--image_dir", IMAGE_DIR, "--csv_path", CSV_PATH],
+            # capture_output=True, text=True,
             cwd=student_path
         )
         return result.returncode == 0
@@ -48,7 +48,7 @@ def main():
     for folder in os.listdir(STUDENT_DIR):
         student_path = os.path.join(STUDENT_DIR, folder)
         roll_number = folder
-        env_name = "VRproject2"
+        env_name = "vr-eval"
         print(f"Evaluating {roll_number} in env {env_name}...")
         try:
             install_requirements(student_path, env_name)

@@ -2,3 +2,4 @@ roll_number,bertscore,failed
 requirements.txt,,True
 .DS_Store,,True
 IMT2022554,0.9999992847442627,False
+environment.yml,,True
