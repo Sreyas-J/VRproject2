@@ -1,0 +1,8 @@
+{"time":"2025-05-17T19:25:47.577799755Z","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpwbwgxwy_/port-147.txt","pid":147,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false}
+{"time":"2025-05-17T19:25:47.585160803Z","level":"INFO","msg":"Will exit if parent process dies.","ppid":147}
+{"time":"2025-05-17T19:25:47.585144312Z","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":33903,"Zone":""}}
+{"time":"2025-05-17T19:25:47.762296424Z","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:37846"}
+{"time":"2025-05-17T19:25:47.768888512Z","level":"INFO","msg":"handleInformInit: received","streamId":"fgxko0up","id":"127.0.0.1:37846"}
+{"time":"2025-05-17T19:25:47.874775123Z","level":"INFO","msg":"handleInformInit: stream started","streamId":"fgxko0up","id":"127.0.0.1:37846"}
+{"time":"2025-05-18T06:37:52.339363988Z","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"fgxko0up","id":"127.0.0.1:37846"}
+{"time":"2025-05-18T06:37:52.339553009Z","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"fgxko0up","id":"127.0.0.1:37846"}

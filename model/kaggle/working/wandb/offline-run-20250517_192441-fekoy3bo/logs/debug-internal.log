@@ -1,0 +1,12 @@
+{"time":"2025-05-17T19:24:48.694762596Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/kaggle/working/wandb/offline-run-20250517_192441-fekoy3bo/logs/debug-core.log"}
+{"time":"2025-05-17T19:24:48.797676609Z","level":"WARN","msg":"GraphQL client is nil, skipping feature loading"}
+{"time":"2025-05-17T19:24:48.797793262Z","level":"INFO","msg":"created new stream","id":"fekoy3bo"}
+{"time":"2025-05-17T19:24:48.797815251Z","level":"INFO","msg":"stream: started","id":"fekoy3bo"}
+{"time":"2025-05-17T19:24:48.797861111Z","level":"INFO","msg":"writer: Do: started","stream_id":"fekoy3bo"}
+{"time":"2025-05-17T19:24:48.797887349Z","level":"INFO","msg":"sender: started","stream_id":"fekoy3bo"}
+{"time":"2025-05-17T19:24:48.797967742Z","level":"INFO","msg":"handler: started","stream_id":"fekoy3bo"}
+{"time":"2025-05-17T19:24:54.360858433Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-17T19:24:55.116345078Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-05-17T19:24:55.122287112Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-05-17T19:24:55.124632805Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-05-17T19:24:55.131898927Z","level":"INFO","msg":"Resuming system monitor"}
